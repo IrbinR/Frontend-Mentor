@@ -36,6 +36,7 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 6rem 0;
+  min-width: 316px;
 }
 
 
@@ -159,4 +160,31 @@ img {
 .nutrition table tr td:last-child {
     color: var(--color-primary-nutmeg);
     font-weight: 600;
+}
+
+@media (max-width: 780px) {
+    body {
+        padding: 0;
+    }
+
+    main {
+        width: 100%;
+        border-radius: 0;
+    }
+
+}
+
+@media (max-width: 375px) {
+    main {
+        padding: 0;
+    }
+
+    main > *:not(img) {
+       margin: 0 2.5rem; 
+    }
+
+    main .nutrition {
+        margin-bottom: 2.5rem;
+    }
+
 }
