@@ -25,6 +25,8 @@ html {
   --font-weight-700: 700;
   --size-mobile: 375px;
   --size-desktop: 1440px;
+  --Outfit: "Outfit", serif;
+  --Young: "Young Serif", serif;
 }
 
 body {
@@ -33,34 +35,128 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /*font-family: "Young Serif", serif;*/
-  /*font-family: "Outfit", serif;*/
+  padding: 6rem 0;
 }
 
 
 main {
+  font-family: var(--Outfit);
   width: 46rem;
   background-color: var(--color-neutral-white);
-  margin-top: 6rem;
-  /* display: flex;
+  display: flex;
   flex-direction: column;
-  align-items: center; */
-  padding: 1.8rem;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  color: var(--color-neutral-wenge-brown);
+  gap: 1.7rem;
 }
 
-main, img {
+img {
   border-radius: 0.5rem;
 }
 
-div, p, img {
-  width: 100%;
+.header, .title {
+    font-family: var(--Young); 
+    font-weight: 400;
+}
+
+.title {
+    font-size: 1.7rem;
 }
 
 .header {
+    color: var(--color-neutral-dark-charcoal);
 }
 
-ol, ul {
-  list-style-position: inside;
+.preparation, .ingredients ul {
+    line-height: 2rem;
+}
+.preparation {
+    background-color: var(--color-neutral-rose-white);
+    padding: 1.5rem;
+}
+
+.preparation__title {
+    color: var(--color-primary-dark-raspberry);
+}
+
+.preparation__title, .font-bold {
+    font-weight: 600;
 }
 
 
+.preparation ul {
+    padding-left: 1.3rem;
+}
+
+.preparation ul li {
+    padding-left: 0.6rem;
+}
+
+:is(.preparation ul li, .ingredients ul li)::marker {
+    color: var(--color-primary-dark-raspberry);
+    font-size: 0.7rem;
+}
+
+.title {
+    color: var(--color-primary-nutmeg);
+}
+
+.ingredients ul, .instructions ol {
+    padding-left: 1.5rem;
+}
+
+.ingredients ul, .instructions ol, .nutrition :is(p, table) {
+    margin-top: 1rem;
+}
+
+:is(.ingredients ul, .instructions ol) li {
+    padding-left: 0.6rem;
+}
+
+.instructions {
+    border-top: solid 1px var(--color-neutral-light-grey);
+    border-bottom: solid 1px var(--color-neutral-light-grey);
+    padding: 1.3rem 0;
+}
+
+.instructions ol li {
+    margin-bottom: 0.8rem;
+}
+
+.instructions ol li::marker {
+    color: var(--color-primary-nutmeg);
+    font-family: var(--Outfit);
+    font-weight: 600;
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrition table tr td {
+    width: 50%;
+}
+
+.nutrition table tr td:first-child {
+    padding-left: 1.7rem;
+}
+
+.nutrition table tr:not(:last-child) {
+    border-bottom: solid 1px var(--color-neutral-light-grey);
+}
+
+.nutrition table tr:not(:last-child) td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.nutrition table tr:last-child td {
+    padding-top: 1rem;
+}
+
+.nutrition table tr td:last-child {
+    color: var(--color-primary-nutmeg);
+    font-weight: 600;
+}
