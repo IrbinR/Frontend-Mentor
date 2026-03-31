@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: var(--font-Outfit);
+}
+
+:root {
+    --primary-blue-500: hsl(215, 51%, 70%);
+    --primary-cyan-400: hsl(178, 100%, 50%);
+    --neutral-blue-950: hsl(217, 54%, 11%);
+    --neutral-blue-900: hsl(216, 50%, 16%);
+    --neutral-blue-800: hsl(215, 32%, 27%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --font-Outfit: "Outfit", sans-serif;
+}
+
+.container,
+.card,
+.info,
+.info__crypto,
+.info__date,
+.footer {
+    display: flex;
+}
+
+.container {
+    background-color: var(--neutral-blue-950);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    background-color: var(--neutral-blue-900);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    flex-direction: column;
+    width: 18rem;
+    gap: 1rem;
+    box-shadow: 0px 30px 0 10px #0C1729;
+}
+
+.card__img,
+.card__title,
+.footer__description span:last-child {
+    cursor: pointer;
+}
+
+.card__img {
+    position: relative;
+}
+
+.card__img__background {
+    width: 100%;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.card__img__view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    visibility: hidden;
+}
+
+.card__img__foreground {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--primary-cyan-400);
+    border-radius: 0.5rem;
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+.card__img:hover :is(.card__img__view, .card__img__foreground) {
+    visibility: visible;
+}
+
+.card__title {
+    color: var(--neutral-white);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card__description {
+    color: var(--primary-blue-500);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.info {
+    justify-content: space-between;
+    border-bottom: solid 1px var(--neutral-blue-800);
+    padding-bottom: 1.3rem;
+}
+
+.info__crypto,
+.info__date {
+    gap: 0.3rem;
+    align-items: center;
+}
+
+.info__crypto {
+    color: var(--primary-cyan-400);
+    font-weight: 600;
+}
+
+.info__date {
+    font-weight: 400;
+}
+
+.footer {
+    align-items: center;
+    gap: 0.7rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer__description  :not(span:first-child) {
+    color: var(--neutral-white);
+}
+
+.card__title:hover,
+.footer__description span:last-child:hover {
+    color: var(--primary-cyan-400);
+}
+
+.footer__avatar {
+    width: 1.5rem;
+    border: solid 1px var(--neutral-white);
+    border-radius: 100%;
+}
