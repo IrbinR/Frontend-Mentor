@@ -5,10 +5,16 @@
     box-sizing: border-box;
 }
 
+
 html {
     font-size: 18px;
     font-family: var(--font-Outfit);
 }
+
+body {
+    min-width: 375px;
+}
+
 
 :root {
     --primary-blue-500: hsl(215, 51%, 70%);
@@ -31,7 +37,7 @@ html {
 
 .container {
     background-color: var(--neutral-blue-950);
-    min-height: 100vh;
+    min-height: 100dvh;
     justify-content: center;
     align-items: center;
 }
@@ -141,3 +147,4 @@ html {
     border: solid 1px var(--neutral-white);
     border-radius: 100%;
 }
+
