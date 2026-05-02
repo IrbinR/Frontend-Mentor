@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-navy-850: hsl(217, 28%, 15%);
+    --primary-navy-900: hsl(218, 28%, 13%);
+    --primary-navy-950: hsl(216, 53%, 9%);
+    --primary-navy-800: hsl(219, 30%, 18%);
+    --accent-teal-200: hsl(176, 68%, 64%);
+    --accent-cyan-500: hsl(198, 60%, 50%);
+    --accent-red-500: hsl(0, 100%, 63%);
+    --neutral-white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+}
+
+html,
+.started__btn {
+    color: var(--neutral-white);
+}
+
+.nav,
+.nav__navbar,
+.intro,
+.started,
+.features,
+.features__container > div,
+.productive,
+.productive__especification,
+.comments,
+.comments__card,
+.comments__card__footer,
+.comments__card__footer__info,
+.submit,
+.submit__card,
+.submit__send,
+.footer__info,
+.footer__info__location,
+.footer__info__contact,
+.footer__info__contact__phone,
+.footer__info__contact__email,
+.footer__info__company,
+.footer__info__legal,
+.footer__info__social {
+    display: flex;
+}
+
+.nav,
+.started,
+.features__container > div,
+.productive,
+.comments__card__footer,
+.submit__card {
+    align-items: center;
+}
+
+.nav, .started, .intro, .submit__card {
+    background-color: var(--primary-navy-850);
+}
+
+.nav {
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.nav__logo {
+    height: 2.5rem;
+}
+
+/* .nav__navbar,
+.started,
+.started__btn,
+.features {
+    color: var(--neutral-white);
+} */
+
+.nav__navbar {
+    list-style: none;
+    gap: 2rem;
+}
+
+.intro,
+.features,
+.productive,
+.comments,
+.submit {
+    justify-content: center;
+}
+
+.started,
+.features__container > div,
+.productive__especification,
+.comments__card,
+.comments__card__footer__info,
+.submit__card,
+.footer__info__contact,
+.footer__info__company,
+.footer__info__legal {
+    flex-direction: column;
+}
+
+
+.started {
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 85%;
+    height: 35rem;
+    padding-top: 3.5rem;
+}
+
+:is(.started, .productive__especification) h1 {
+    font-size: 2.5rem;    
+}
+
+.started h1 {
+    width: 55rem;
+    line-height: 3rem;
+}
+
+.started p {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8rem;
+    width: 30rem;
+    font-weight: 500;
+}
+
+.started :is(h1, p),
+.features__container > div {
+    text-align: center;
+}
+
+.started__btn {
+    width: 15rem;
+    background-color: var(--accent-teal-200);
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    font-weight: 600;
+}
+
+.features,
+.productive,
+.comments,
+.submit {
+    background-color: var(--primary-navy-900);
+}
+
+.features__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+    width: 80rem;
+    /* border: solid 1px yellow; */
+}
+
+.features__container > div {
+    gap: 1rem;
+}
+
+.features__container > div h2 {
+    margin-top: 1.5rem;
+}
+
+.features__container > div p {
+    line-height: 1.5rem;
+}
+
+.features__container > div:is(:first-child, :last-child) p {
+    width: 25rem;
+}
+
+.features__container > div:is(:nth-child(2), :nth-child(3)) p {
+    width: 27rem;
+}
+
+.productive {
+    gap: 4rem;
+    padding: 9rem 0;
+}
+
+.productive__especification {
+    gap: 1.5rem;
+}
+
+.productive__especification h1 {
+    width: 25rem;
+}
+
+.productive__especification a {
+    width: 10.6rem;
+    padding-bottom: 0.5rem;
+    color: var(--accent-teal-200);
+    text-decoration: none;
+    border-bottom: solid 1px var(--accent-teal-200);
+}
+
+.productive__especification a :is(span, img) {
+    vertical-align: middle;
+}
+
+.comments {
+    gap: 3rem;
+    background-image: url(../images/bg-quotes.png);
+    background-repeat: no-repeat;
+}
+
+.comments__card {
+    width: 25rem;
+    gap: 2rem;
+    background-color: var(--primary-navy-800);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.comments__card__footer {
+    gap: 1rem;
+}
+
+.comments__card__footer img {
+    /* width: 2rem; */
+    height: 2.5rem;
+    border-radius: 100%;
+}
+
+.comments__card__footer__info {
+    /* border: solid 2px red; */
+    gap: 0.5rem;
+}
+
+.submit {
+    position: relative;
+}
+
+.submit__card {
+    position: relative;
+    bottom: -8rem;
+    width: 65rem;
+    padding: 4rem;
+    border-radius: 0.5rem;
+    gap: 1.5rem;
+}
+
+.submit__send {
+    gap: 2rem;
+    border: solid 2px yellow;
+    width: 100%;
+}
+
+.submit__send input {
+    flex: 1;
+    border-radius: 2rem;
+    border: none;
+}
+
+.footer {
+    background-color: var(--primary-navy-950);
+    padding: 12rem 4rem 10rem 8rem;
+}
+
+
+.footer__info__social img {
+    width: 1.5rem;
+    height: 1.5rem;
+    /* border: solid 1px #ffffff; */
+    border-radius: 100%;
+}
+
+
+
