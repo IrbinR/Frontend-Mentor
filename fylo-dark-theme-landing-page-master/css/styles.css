@@ -210,8 +210,16 @@ html,
 
 .comments {
     gap: 3rem;
-    background-image: url(../images/bg-quotes.png);
-    background-repeat: no-repeat;
+}
+
+.comments__card:first-child {
+    position: relative;
+}
+
+.comments__quote {
+    position: absolute;
+    top: -3rem;
+    left: -1rem;
 }
 
 .comments__card {
@@ -250,9 +258,12 @@ html,
     gap: 1.5rem;
 }
 
+.submit__card p {
+    text-align: center;
+}
+
 .submit__send {
     gap: 2rem;
-    border: solid 2px yellow;
     width: 100%;
 }
 
@@ -260,6 +271,7 @@ html,
     flex: 1;
     border-radius: 2rem;
     border: none;
+    padding-left: 2.8rem;
 }
 
 .footer {
