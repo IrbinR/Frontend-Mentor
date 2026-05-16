@@ -42,6 +42,7 @@ html,
 .submit,
 .submit__card,
 .submit__send,
+.footer,
 .footer__info,
 .footer__info__location,
 .footer__info__contact,
@@ -49,7 +50,8 @@ html,
 .footer__info__contact__email,
 .footer__info__company,
 .footer__info__legal,
-.footer__info__social {
+.footer__info__social,
+.footer__info__social > div {
     display: flex;
 }
 
@@ -58,7 +60,8 @@ html,
 .features__container > div,
 .productive,
 .comments__card__footer,
-.submit__card {
+.submit__card,
+.footer__info__social > div {
     align-items: center;
 }
 
@@ -91,7 +94,8 @@ html,
 .features,
 .productive,
 .comments,
-.submit {
+.submit,
+.footer__info__social > div {
     justify-content: center;
 }
 
@@ -101,6 +105,7 @@ html,
 .comments__card,
 .comments__card__footer__info,
 .submit__card,
+.footer,
 .footer__info__contact,
 .footer__info__company,
 .footer__info__legal {
@@ -230,6 +235,12 @@ html,
     padding: 2rem;
 }
 
+.comments__card > p,
+.submit__card > p,
+.footer__info__location > p {
+    line-height: 1.6rem;
+}
+
 .comments__card__footer {
     gap: 1rem;
 }
@@ -277,15 +288,53 @@ html,
 .footer {
     background-color: var(--primary-navy-950);
     padding: 12rem 4rem 10rem 8rem;
+    gap: 2rem;
+}
+
+.footer .nav__logo {
+    align-self: flex-start;
+}
+
+.footer__info {
+    justify-content: space-between;
+}
+
+.footer__info__location,
+.footer__info__contact,
+.footer__info__contact__phone,
+.footer__info__contact__email,
+.footer__info__company,
+.footer__info__legal {
+    gap: 1.5rem;
+}
+
+.footer__info__location img {
+    align-self: flex-start;
+}
+
+.footer__info__location p {
+    width: 22rem;
 }
 
 
-.footer__info__social img {
+.footer__info__social {
+    gap: 1rem;
+}
+.footer__info__social > div {
+    align-self: flex-start;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: solid 1px #ffffff;
+    border-radius: 100%;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+.footer__info__social div img {
     width: 1.5rem;
     height: 1.5rem;
-    /* border: solid 1px #ffffff; */
-    border-radius: 100%;
 }
 
-
-
+.footer__info__social > div:nth-child(2) img {
+    width: 1.2rem;
+}
